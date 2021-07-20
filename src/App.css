@@ -1,20 +1,55 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
-.logo{
-  width: 100%;
+.mobileScreen__nav{
+  /*background-color: white;*/
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
 }
-.img{
-  padding: 20px;
+.mobileScreen__affilboost{
+  width: 120px;
+  margin: 10px;
+  object-fit: contain;
 }
-/*.text{*/
-/*  border-width: 20px;*/
-/*  border-color: red;*/
-/*}*/
-.box{
-  border-width: 20px;
+.mobileScreen__tape1{
+  position: fixed;
+  width: 400px;
+  transform: rotate(16deg);
+  margin-top: 60px;
+  margin-left: -8px;
+  filter: drop-shadow(2px 2px 2px black);
+  background-repeat: no-repeat;
+  background-size: contain
 }
-
-
-
+.mobileScreen__tape2{
+  position: fixed;
+  width: 400px;
+  transform: rotate(-11deg);
+  margin-top: 20px;
+  margin-left: -8px;
+  filter: drop-shadow(2px 2px 2px black);
+  background-repeat: no-repeat;
+  background-size: contain
+}
+.mobileScreen__content{
+  margin-left: 50px;
+  margin-top: 30px;
+}
+.mobileScreen__exclaim{
+  width: 100px;
+}
+.mobileScreen__writing{
+  font-family: 'Poppins', sans-serif;
+}
+.mobileScreen__writing>h1{
+  margin-top: -3px;
+}
+.mobileScreen__writing>h2{
+  margin-top: -28px;
+}
+.mobileScreen__writing>h4{
+  margin-top: -15px;
+}

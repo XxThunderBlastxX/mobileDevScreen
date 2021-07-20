@@ -1,48 +1,40 @@
-import img_ from './images/dev (1).png';
+import logo from './images/download.png';
+import tape from './images/DO_NOT_ENTER (1).png';
+import exclaim from './images/exclaim.png';
 import './App.css';
 
-function App() {
-    function getMobileOperatingSystem() {
-        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-        if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
-        {
-            return 'iOS';
-        }
-        else if( userAgent.match( /Android/i ) )
-        {
-            return 'Android';
-        }
-        else
-        {
-            return 'unknown';
-        }
+function App() {
+    function getMobileScreenRes() {
+        if( window.screen.availWidth < 768 )
+            {
+                 return 'mobile';
+            }
     }
-    if(getMobileOperatingSystem() === "iOS" || getMobileOperatingSystem === "Android " ){
+    if(getMobileScreenRes() === "mobile" ){
         return (
-            <h1>hello</h1>
+        <div className="mobileScreen">
+            <nav className={"mobileScreen__nav"}>
+                <img src={logo} alt={"affilboost"} className={"mobileScreen__affilboost"}/>
+            </nav>
+            <div className={"mobileScreen__content"}>
+                <img src={exclaim} alt={"!"} className={"mobileScreen__exclaim"}/>
+                <div className={"mobileScreen__writing"}>
+                    <h1> Mobile Website </h1>
+                    <h2>Under-Construction</h2>
+                    <h4>Our Apologies. Our Developers are working on it and we will soon come back with our website for mobile phones, so you can enjoy our services right from our mobile phone !!!</h4>
+                </div>
+            </div>
+            <div>
+                <img src={tape} alt={"underConstruction"} className={"mobileScreen__tape1"}/>
+                <img src={tape} alt={"underConstruction"} className={"mobileScreen__tape2"}/>
+            </div>
+        </div>
         );
     }
     else{
         return(
-        <div className="App">
-            <div className={"mobile"}>
-                <div className={"img"}>
-                    <img src={img_} className={"logo"} alt="logo" />
-                </div>
-                <div className={"box"}>
-                    <div className={"text"}>
-                        Sorry For the inconvenience ! <br/>
-                        Our Website is Still under-construction for mobile devices...<br/>
-                        Stay tuned We will get back with all mobile-device compatibility soon
-                        So that you can enjoy our services directly from your mobile phone !!!
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
+            <h1>hello</h1>
         );
     }
 
