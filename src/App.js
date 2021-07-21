@@ -1,5 +1,5 @@
 import logo from './images/download.png';
-import tape from './images/DO_NOT_ENTER (1).png';
+import tape from './images/underConstruction.png';
 import exclaim from './images/exclaim.png';
 import './App.css';
 
@@ -34,7 +34,7 @@ function App() {
     }
     else{
         return(
-            <h1>hello</h1>
+            <h1>hello! Open this in Mobile Phone</h1>
         );
     }
 
